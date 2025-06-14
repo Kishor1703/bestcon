@@ -133,6 +133,12 @@
 	color: #fff;
 }
 
+#about_us {
+ position: relative;
+ padding: 100px 0;
+ background: #f5f5f5;
+ animation-timing-function: linear;
+}
 /*About_Sec*/
 .about-left p {
 	text-transform: capitalize;
@@ -141,6 +147,7 @@
 }
 #about_us img {
 	width: 100%;
+	animation-timing-function: ease-in;
 }
 .icon-lf {
 	width: 50px;

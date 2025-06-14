@@ -1,115 +1,138 @@
 <!DOCTYPE html>
-<html>
-<body>
-  <script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="images/BESTCON_logo-removebg-preview.png">
+  <title>Why Choose BESTCON</title>
+  <style>
+   
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-      document.getElementById("first-header").innerHTML = "404 - File Not Found";
-      document.getElementById("second-sub-header").innerHTML = "The Page/Resource you are looking for could not be found or is unavailable. Ensure you are using the correct URL/Domain name or contact the Site Owner";
-      var get=document.getElementsByTagName("A");
-      for(i=0; i<get.length; i++){
-        get[i].removeAttribute("onmouseover");
-        get[i].removeAttribute("onmouseout");
+    .container {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 180px;
+      height: 180px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #0077d9;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 119, 217, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 25px rgba(0, 119, 217, 0);
       }
     }
-  };
-  xhttp.open("GET", "/errors/SingleDomainHosting.php", true);
-  xhttp.send();
 
-  </script>
-<style>
+    .feature {
+      position: absolute;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
 
-.wrapper{
-  overflow-y: hidden;
-  padding: 0px;
-  margin:0px;
-  background: none !important;
-  width: 100% !important;
-}
-.header-container {
-  text-align: -webkit-center;
-  width: 100%;
-  height: 150px;
-  background: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: larger;
-}
-.header-container > p,h1 {
-  padding:5px;
-}
-.header-container > p {
-  color: #707070;
-}
-.header-container > h1 {
-  color: #333333;
-}
-.content-container {
-  position: absolute;
-  background-color: #202020;
-  height: 635px;
-  width: 100%;
-}
-.dynamic-content {
-  position: relative !important;
-  padding: 0 10em 0 10em;
-  top: -50px;
-}
-.dynamic-content > div {
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: #e1e1e1;
-  height: 550px;
-  overflow-y: hidden;
-}
-@media only screen and (max-width:480px) {
-  .dynamic-content > div {
-    border-style: solid;
-    border-width: 0 2px 2px 2px;
-    border-color: #e1e1e1;
-    overflow-y: hidden;
-    height: auto;
-  }
-  .dynamic-content {
-    padding: 0;
-    top: 0;
-  }
-  .content-container {
-    height: auto;
-  }
-}
-@media only screen and (max-width: 768px) and (min-width: 481px)  {
-  .dynamic-content > div {
-    border-style: solid;
-    border-width: 0 5px 5px 5px;
-    border-color: #e1e1e1;
-    overflow-y: hidden;
-    height: auto;
-  }
-  .dynamic-content {
-    padding: 0 2em 0 2em;
-    top: 0;
-  }
-  .content-container {
-    height: auto;
-  }
-}
-</style>
-<div class="wrapper" id="wrapper">
-  <div class="header-container">
-    <h1 id="first-header"></h1>
-    <p id="first-sub-header"></p>
-    <p id="second-sub-header"></p>
-  </div>
-  <div class="content-container">
-  </div>
-  <div class="dynamic-content" id="demo">
-  </div>
-</div>
+    .feature:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
 
+    .feature .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      color: white;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .f1 { top: 75%; left: 50%; transform: translate(-50%, -50%); animation-delay: 0.2s; }
+    .f2 { top: 75%; left: 15%; transform: translate(-50%, -50%); animation-delay: 0.4s; }
+    .f3 { top: 50%; left: 0%; transform: translate(-50%, -50%); animation-delay: 0.6s; }
+    .f4 { top: 15%; left: 15%; transform: translate(-50%, -50%); animation-delay: 0.8s; }
+    .f5 { top: 10%; left: 50%; transform: translate(-50%, -50%); animation-delay: 1s; }
+    .f6 { top: 25%; left: 70%; transform: translate(-50%, -50%); animation-delay: 1.2s; }
+    .f7 { top: 50%; left: 75%; transform: translate(-50%, -50%); animation-delay: 1.4s; }
+
+    /* Gradient Colors */
+    .f1 .circle { background: linear-gradient(to right, #ff9966, #ff5e62); }
+    .f2 .circle { background: linear-gradient(to right, #00c6ff, #0072ff); }
+    .f3 .circle { background: linear-gradient(to right, #e52d27, #b31217); }
+    .f4 .circle { background: linear-gradient(to right, #f9d423, #ff4e50); color: #000; }
+    .f5 .circle { background: linear-gradient(to right, #9be15d, #00e3ae); }
+    .f6 .circle { background: linear-gradient(to right, #6a11cb, #2575fc); }
+    .f7 .circle { background: linear-gradient(to right, #36d1dc, #5b86e5); }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.6); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <img src="images/BESTCON_logo-removebg-preview.png" alt="BESTCON Logo" style="max-width: 100%; height: auto;">
+    </div>
+
+    <div class="feature f1">
+      <div class="circle">01</div>
+      <div>Consistently Efficient</div>
+    </div>
+
+    <div class="feature f2">
+      <div class="circle">02</div>
+      <div>Sustainability</div>
+    </div>
+
+    <div class="feature f3">
+      <div class="circle">03</div>
+      <div>Customized Solution</div>
+    </div>
+
+    <div class="feature f4">
+      <div class="circle">04</div>
+      <div>Uncompromised Quality</div>
+    </div>
+
+    <div class="feature f5">
+      <div class="circle">05</div>
+      <div>Timely Delivery</div>
+    </div>
+
+    <div class="feature f6">
+      <div class="circle">06</div>
+      <div>Reliability</div>
+    </div>
+
+    <div class="feature f7">
+      <div class="circle">07</div>
+      <div>Cost Effective</div>
+    </div>
+  </div>
 </body>
 </html>

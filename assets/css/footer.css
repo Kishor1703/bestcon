@@ -4,16 +4,17 @@
 /*==============================================================================================*/
 
 .footer {
-	background-color: #222;
+	 background: linear-gradient(360deg, rgba(252, 252, 5, 0.915), #0089ec); /* Blue Gradient */
 	background-size: cover;
 	position: relative;
 	width: 100%;
 	display: block;
 	overflow: hidden;
-	color: #fff;
+	color: white;
+	height: 10%;
 }
 .footer h4{
-	color: #fff;
+	color: white;
 }
 
 .footer .footer-info p {
@@ -40,7 +41,7 @@
 	margin: 0 7px 0 0;
 }
 .footer .link a {
-	color: #fff;
+	color: white;
 	font-size: 12px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -49,7 +50,7 @@
 	color: #fff;
 }
 .footer h5 {
-	color: #f0eded;
+	color: white;
 	margin-bottom: 30px;
 }
 .footer .link-small a {
@@ -64,7 +65,7 @@
 	margin-bottom: 15px;
 }
 .footer .link-small a {
-	color: #fff;
+	color: white;
 	position: relative;
 	padding-left: 29px
 }
@@ -79,7 +80,7 @@
 	margin-bottom: 15px;
 	display: inline-block;
 	margin-right: 1px;
-	background:#ffa500;
+	background:#0089ec;
 	color: #fff;
 }
 .footer .icons-hover-black a:hover i{
@@ -93,7 +94,7 @@
 .footer .copyright {
 	text-align: center;
 	padding: 18px 0 10px;
-	background:#3e3e3e;
+	background:#0089ec;
 	position: relative;
 }
 
@@ -168,12 +169,12 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #daa106;
+	background: #0089ec;
 	transform: rotate(23deg);
 	transform-origin: 100% 0;
 }
 .footer-style-2 .icons-hover-black i {
-	background: #02695e;
+	background:  #0089ec;
 }
 .footer-style-2 .footer-info p {
 	margin-bottom: 15px;
@@ -246,3 +247,23 @@ position: absolute;
 .copyright p{
 	margin: 0px;
 }
+
+
+
+
+
+
+
+
+
+.footer ul li a:hover {
+  color: #0089ec;
+  text-decoration: none;
+}
+
+
+
+.icons-hover-black a:hover {
+  color: #0089ec;
+}
+
