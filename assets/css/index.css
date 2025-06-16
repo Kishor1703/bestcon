@@ -1,6 +1,15 @@
 /*-------------------------------------------------------------------------------------------*/
 /*  Main Banner        ||---------------------------- */
 /*-------------------------------------------------------------------------------------------*/
+*{
+	font-family: sans-serif;
+}
+
+p{
+	  font-size: 20px;
+	
+}
+
 .main-banner {
 	position: relative;
 	margin-top: 106px;
@@ -16,7 +25,7 @@
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	line-height: 1;
-	color: #ffa500;
+	color: rgba(252, 252, 5, 0.915);
 }
 .main-banner .banner-text h2, .main-banner .banner-text h2 span {
 	font-size: 45px;
@@ -153,7 +162,7 @@
 	width: 50px;
 	height: 50px;
 	line-height: 50px;
-	background: #ffa500;
+	background: rgba(252, 252, 5, 0.915);
 	text-align: center;
 	color: #fff;
 	border-radius: 5px;
@@ -300,7 +309,7 @@
 	background: #2adc71;
 }
 .orgen_bg {
-	background: #ffa500;
+	background: rgba(252, 252, 5, 0.915);
 }
 .maine_box .items_picher img {
 	width: 100%;
@@ -352,7 +361,7 @@
 }
 .use_detail .event_detail {
 	border-radius: 50%;
-	border: 2px solid #ffa500;
+	border: 2px solid rgba(252, 252, 5, 0.915);
 	width: 50px;
 	height: 50px;
 	background: #FFA500;
@@ -447,7 +456,7 @@ figure {
 	right: 0;
 	color: #fff;
 	padding: 6px;
-	background: #ffa500;
+	background: rgba(252, 252, 5, 0.915);
 	min-width: 80px;
 	text-align: center;
 }
@@ -549,7 +558,7 @@ figure {
 	background: #eaeaea none repeat scroll 0 0;
 	border-radius: 50%;
 	bottom: -23px;
-	color: #ffa500;
+	color: rgba(252, 252, 5, 0.915);
 	content: "\f10d";
 	font-family: fontawesome;
 	font-size: 18px;
@@ -589,8 +598,8 @@ figure {
 }
 
 .testimonial_carosule-wrap .owl-nav div {
-	border: 1px solid #ffa500;
-	color: #ffa500;
+	border: 1px solid rgba(252, 252, 5, 0.915);
+	color: rgba(252, 252, 5, 0.915);
 	display: inline-block;
 	font-size: 18px;
 	height: 40px;
@@ -609,7 +618,7 @@ figure {
 	text-align: center;
 }
 .testimonial_carosule-wrap .owl-nav div:hover {
-	background: #ffa500;
+	background: rgba(252, 252, 5, 0.915);
 	color: #fff;
 }
 .member_say {
@@ -662,7 +671,7 @@ figure {
 	display: inline-block;
 	margin-bottom: 15px;
 	font-weight: 700;
-	color: #ffa500;
+	color: rgba(252, 252, 5, 0.915);
 }
 .blog .post-content a.blog_tital:hover, .blog .post-content a.read_more:hover {
 	color: #714da0;

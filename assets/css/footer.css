@@ -2,7 +2,14 @@
 /*==============================================================================================*/
 /* FOOTER         ||---------------------------- */
 /*==============================================================================================*/
+*{
+	font-family: sans-serif;
+}
 
+p{
+	  font-size: 20px;
+	   
+}
 .footer {
 	 background: linear-gradient(360deg, rgba(252, 252, 5, 0.915), #0089ec); /* Blue Gradient */
 	background-size: cover;
@@ -12,10 +19,13 @@
 	overflow: hidden;
 	color: white;
 	height: 10%;
+	font-size: 20px;
 }
 .footer h4{
 	color: white;
+	font-size: 20px
 }
+
 
 .footer .footer-info p {
 	margin-bottom: 0px;
@@ -42,7 +52,7 @@
 }
 .footer .link a {
 	color: white;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 400;
 	text-transform: uppercase;
 }
