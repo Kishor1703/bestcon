@@ -342,11 +342,11 @@
 		background: rgba(252, 252, 5, 0.915);
 	}
 	.menu{
-		border-bottom: 4px solid #fff;
-    border-top: 4px solid #fff
+		border-bottom: 4px solid #000000;
+    border-top: 4px solid #000000
 	}
 	.menu:after{
-		background: #fff;
+		background: #000000;
 	}
 	
 	.menu-bg .navigation > ul > li > a{
@@ -372,11 +372,11 @@
 	}
 
 	.navigation ul li {
-		border-bottom: 1px solid #fff
+		border-bottom: 1px solid #000000
 	}
 	.navigation > ul > li > a{
 		padding: 10px 15px;
-		color: #fff;
+		color: #000000;
 	}
 
 	.navigation .sub-nav, .navigation li.sub-menu .sub-nav, .navigation li.sub-menu:hover .sub-nav {
@@ -390,7 +390,7 @@
 		padding: 0;
 	}
 	.navigation ul li i {
-		color: #fff;
+		color: #000000;
 		font-size: 25px;
 		position: absolute;
 		right: 15px;
