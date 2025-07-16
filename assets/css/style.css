@@ -39,9 +39,7 @@
 /* BASIC STYLE    ||---------------------------- */
 /*-----------------
 --------------------------------------------------------------------------*/
-*{
-	font-family:  Tahoma, "Trebuchet MS", sans-serif;
-}
+
 
 p{
 	  font-size: 18px;
@@ -10294,7 +10292,7 @@ a.btn.xplus-btn.pricing.active:hover {
 
 /*creers_page*/
 .creer_page .card-header {
-	background: #222;
+	background:#0089ec;
 }
 .creer_page .card-header .panel-title a {
 	color: #fff;
@@ -11318,3 +11316,57 @@ body .width-100per {
     width: 100%;
 }
 
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .company-name {
+   font-weight: bolder;
+  font-size: 10vw;
+  margin: 0;
+  }
+
+  .values-container h2 {
+    font-size: 7vw;
+  }
+
+  .values-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.company-name {
+  font-weight: bolder;
+  font-size: 4vw;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .company-name {
+    font-size: 12vw; /* even bigger for very small screens */
+  }
+}
+@media (max-width: 768px) {
+  #about_us > div {
+    flex-direction: column;
+    height: 400px !important;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  #about_us > div > div:first-child {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  #about_us h2 {
+    font-size: 1.8rem;
+  }
+
+  #about_us p {
+    font-size: 16px !important;
+    line-height: 1.6;
+  }
+
+  #about_us img {
+   visibility: hidden;
+  }
+}
