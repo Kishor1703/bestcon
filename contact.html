@@ -194,42 +194,42 @@
   <!-- Contact Section -->
   <section class="contact py-5">
     <div class="container">
-      <div class="row text-center mb-5">
-        <div class="col-md-4 mb-4">
-          <div class="contact-info">
-            <div class="contact-info-item d-flex align-items-start">
-              <div class="contact-info-icon me-3">
-                <i class="fas fa-map-marked fa-2x"></i>
+      <div class="row justify-content-center mb-5 gx-4 gy-4">
+        <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+          <div class="contact-info contact-info-even modern-contact-box w-100">
+            <div class="contact-info-item d-flex flex-column align-items-center justify-content-center h-100 text-center">
+              <div class="contact-info-icon mb-3">
+                <i class="fa fa-map-marker fa-3x"></i>
               </div>
-              <div class="contact-info-text text-start">
-                <h5>Address</h5>
-                <p>314/2 Perumbulli Village, Thenampatty post,<br> Vadamadurai, Dindigul-624801.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="contact-info">
-            <div class="contact-info-item d-flex align-items-start">
-              <div class="contact-info-icon me-3">
-                <i class="fas fa-envelope fa-2x"></i>
-              </div>
-              <div class="contact-info-text text-start">
-                <h5>E-mail</h5>
-                <p>bestconblocks@gmail.com</p>
+              <div class="contact-info-text">
+                <h5 class="contact-heading">Address</h5>
+                <p class="contact-content">314/2 Perumbulli Village, Thenampatty post,<br>Vadamadurai, Dindigul-624801.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="contact-info">
-            <div class="contact-info-item d-flex align-items-start">
-              <div class="contact-info-icon me-3">
-                <i class="fas fa-envelope fa-2x"></i>
+        <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+          <div class="contact-info contact-info-even modern-contact-box w-100">
+            <div class="contact-info-item d-flex flex-column align-items-center justify-content-center h-100 text-center">
+              <div class="contact-info-icon mb-3">
+                <i class="fa fa-envelope fa-3x"></i>
               </div>
-              <div class="contact-info-text text-start">
-                 <h5>Office Time</h5>
-                <p>Mon - Thu: 9:00 am - 4:00 pm<br>Fri - Mon: 10:00 am - 5:00 pm</p>
+              <div class="contact-info-text">
+                <h5 class="contact-heading">E-mail</h5>
+                <p class="contact-content">bestconblocks@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+          <div class="contact-info contact-info-even modern-contact-box w-100">
+            <div class="contact-info-item d-flex flex-column align-items-center justify-content-center h-100 text-center">
+              <div class="contact-info-icon mb-3">
+                <i class="fa fa-clock-o fa-3x"></i>
+              </div>
+              <div class="contact-info-text">
+                 <h5 class="contact-heading">Office Time</h5>
+                <p class="contact-content">Mon - Thu<br>Fri - Mon</p>
               </div>
             </div>
           </div>
@@ -290,21 +290,82 @@
       </div>
     </div>
     <style>
+      .modern-contact-box {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.2s;
+        padding: 36px 24px 28px 24px;
+        margin: 0 10px;
+      }
+      .modern-contact-box:hover {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      }
+      .contact-info-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
       .contact-info-icon {
-        color: #007bff;
+        color: #000 !important;
+        margin-bottom: 18px;
+        font-size: 2.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-
-      .contact-info h5 {
-        font-weight: 600;
+      .contact-info-icon i {
+        color: #000 !important;
+        font-size: 2.2rem;
       }
-
-      .contact-page-form input,
-      .contact-page-form textarea {
-        border-radius: 0;
+      .contact-heading {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #222;
+        letter-spacing: 0.5px;
       }
-
-      .contact-page-form button {
-        border-radius: 0;
+      .contact-content {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #444;
+        margin-bottom: 0;
+      }
+      .row.gx-4 {
+        gap: 32px 0;
+      }
+      @media (max-width: 991px) {
+        .modern-contact-box {
+          min-height: 180px;
+          margin: 0 0 20px 0;
+        }
+      }
+      @media (max-width: 767px) {
+        .modern-contact-box {
+          min-height: 140px;
+          padding: 24px 10px 18px 10px;
+        }
+        .contact-info-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 1.3rem;
+        }
+        .contact-info-icon i {
+          font-size: 1.3rem;
+        }
+        .contact-heading {
+          font-size: 1.1rem;
+        }
+        .contact-content {
+          font-size: 0.95rem;
+        }
       }
     </style>
   </section>
@@ -359,10 +420,7 @@
 				</ul>
 				<div class="icons-hover-black mt-3">
 					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-youtube"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/bestcon_aac_blocks/"><i class="fa fa-instagram"></i></a>
 				</div>
 			</div>
 

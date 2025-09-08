@@ -3,7 +3,7 @@
 /* FOOTER         ||---------------------------- */
 /*==============================================================================================*/
 *{
-	font-family: sans-serif;
+	font-family: 'Poppins', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 p{
@@ -20,10 +20,14 @@ p{
 	color: white;
 	height: 610px;
 	font-size: 20px;
+	min-height: 350px;
 }
-.footer h4{
+.footer h4, .footer h5, .footer h6, .footer h3, .footer h2, .footer h1 {
 	color: white;
-	font-size: 20px
+	font-size: 20px;
+	font-family: 'Poppins', 'Segoe UI', Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	word-break: break-word;
 }
 
 
@@ -62,10 +66,81 @@ p{
 .footer h5 {
 	color: white;
 	margin-bottom: 30px;
+	word-break: break-word;
 }
-.footer .link-small a {
-	text-transform: none;
+/* .footer .link-small a { */
+@media (max-width: 991px) {
+	.footer {
+		height: auto !important;
+		min-height: unset !important;
+		font-size: 16px;
+		padding: 20px 5px;
+		overflow-y: visible !important;
+	}
+	.footer .footer-info .col-lg-4, .footer .footer-info .col-lg-3, .footer .footer-info .col-sm-12 {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-bottom: 20px;
+		padding: 0 10px;
+		text-align: left;
+	}
+	.footer h4, .footer h5, .footer h6, .footer h3, .footer h2, .footer h1 {
+		font-size: 18px;
+	}
+	.footer .footer-brand {
+		font-size: 28px !important;
+	}
+	.footer .link a, .footer .link-small a {
+		font-size: 14px;
+	}
+	.footer .icons-hover-black i {
+		width: 24px;
+		height: 24px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.footer .blog-link img {
+		width: 40px;
+		height: 28px;
+	}
+	.footer .copyright {
+		font-size: 13px;
+		padding: 10px 0 5px;
+	}
 }
+@media (max-width: 600px) {
+	.footer {
+		height: auto !important;
+		min-height: unset !important;
+		font-size: 14px;
+		padding: 10px 2px;
+		overflow-y: visible !important;
+	}
+	.footer h4, .footer h5, .footer h6, .footer h3, .footer h2, .footer h1 {
+		font-size: 16px;
+	}
+	.footer .footer-brand {
+		font-size: 20px !important;
+	}
+	.footer .link a, .footer .link-small a {
+		font-size: 12px;
+	}
+	.footer .icons-hover-black i {
+		width: 18px;
+		height: 18px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.footer .blog-link img {
+		width: 28px;
+		height: 18px;
+	}
+	.footer .copyright {
+		font-size: 11px;
+		padding: 6px 0 3px;
+	}
+}
+
 .footer address {
 	position: relative;
 	padding-left: 30px;

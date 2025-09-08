@@ -185,17 +185,29 @@
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  .banner-text h2 {
-    font-size: 2rem;
-  }
-
-  .banner-text span {
-    font-size: 1.2rem;
-  }
-
-  .banner-text p {
-    font-size: 1rem;
-  }
+	.banner-text h2 {
+		font-size: 1.3rem;
+	}
+	.banner-text span {
+		font-size: 1rem;
+	}
+	.banner-text p {
+		font-size: 0.9rem;
+	}
+	.values-container {
+		flex-direction: column;
+		margin-top: 20px;
+		gap: 10px;
+	}
+	.value-left, .value-right, .value-center {
+		width: 100%;
+		padding: 10px;
+		font-size: 1.1rem;
+	}
+	.value-left h2, .value-right h2, .value-center h2 {
+		font-size: 1.3rem;
+		margin-bottom: 8px;
+	}
 }
 
 
@@ -340,27 +352,34 @@
 	}
 	.header{
 		background: rgba(252, 252, 5, 0.915);
+		position: relative;
+		height: auto;
+		min-height: 60px;
 	}
 	.menu{
 		border-bottom: 4px solid #000000;
-    border-top: 4px solid #000000
+		border-top: 4px solid #000000;
+		top: 15px;
+		right: 10px;
+		width: 36px;
+		height: 24px;
 	}
 	.menu:after{
 		background: #000000;
+		height: 3px;
+		top: 7px;
 	}
-	
 	.menu-bg .navigation > ul > li > a{
-		padding: 10px 15px;
+		padding: 8px 10px;
+		font-size: 14px;
 	}
 	.header ul, .header ul li {
 		float: none !important;
 	}
-
-	
 	.logo a {
-		padding: 29px 0px !important;
+		padding: 18px 0px !important;
+		max-width: 120px;
 	}
-
 	.navigation {
 		display: none;
 		position: absolute;
@@ -370,15 +389,14 @@
 		z-index: 9;
 		background:rgba(252, 252, 5, 0.915);
 	}
-
 	.navigation ul li {
-		border-bottom: 1px solid #000000
+		border-bottom: 1px solid #000000;
 	}
 	.navigation > ul > li > a{
-		padding: 10px 15px;
+		padding: 8px 10px;
 		color: #000000;
+		font-size: 14px;
 	}
-
 	.navigation .sub-nav, .navigation li.sub-menu .sub-nav, .navigation li.sub-menu:hover .sub-nav {
 		position: static;
 		opacity: 1;
@@ -391,10 +409,10 @@
 	}
 	.navigation ul li i {
 		color: #000000;
-		font-size: 25px;
+		font-size: 20px;
 		position: absolute;
-		right: 15px;
-		top: 9px;
+		right: 10px;
+		top: 7px;
 		cursor: pointer;
 		pointer-events: none;
 	}
@@ -405,7 +423,4 @@
 		content: '\f462';
 		font-family: "Ionicons";
 	}
-
-
-	
 }
