@@ -7,7 +7,7 @@
 }
 
 p{
-	  font-size: 20px;
+	  font-size: 17px;
 	   
 }
 .footer {
@@ -88,7 +88,7 @@ p{
 		font-size: 18px;
 	}
 	.footer .footer-brand {
-		font-size: 28px !important;
+		font-size: 35px !important;
 	}
 	.footer .link a, .footer .link-small a {
 		font-size: 14px;
@@ -120,7 +120,8 @@ p{
 		font-size: 16px;
 	}
 	.footer .footer-brand {
-		font-size: 20px !important;
+		padding-top: 10px;
+		font-size: 35px !important;
 	}
 	.footer .link a, .footer .link-small a {
 		font-size: 12px;

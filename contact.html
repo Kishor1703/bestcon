@@ -83,13 +83,13 @@
     height: 110px;
   }
   .contact-page-form.contact-form input[type="submit"] {
-    background: #e7f434;
+    /* background: #e7f434;  */
     width: 150px;
     border-color: #071c34;
   }
   .contact-info-icon i {
     font-size: 48px;
-    color: #e7f434;
+    /* color: #e7f434; */
   }
   .contact-info-text p{margin-bottom:0px;}
   .contact-info-text h3 {
@@ -120,7 +120,85 @@
   display: inline-block;
   width: 100%;
   padding-left: 0;
-  }</style>
+  }
+  .modern-contact-box {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.2s;
+        padding: 36px 24px 28px 24px;
+        margin: 0 10px;
+      }
+      .modern-contact-box:hover {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      }
+      .contact-info-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .contact-info-icon {
+        color: #000 !important;
+        margin-bottom: 18px;
+        font-size: 2.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact-info-icon i {
+        color: #000 !important;
+        font-size: 2.2rem;
+      }
+      .contact-heading {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #222;
+        letter-spacing: 0.5px;
+      }
+      .contact-content {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #444;
+        margin-bottom: 0;
+      }
+      .row.gx-4 {
+        gap: 32px 0;
+      }
+      @media (max-width: 991px) {
+        .modern-contact-box {
+          min-height: 180px;
+          margin: 0 0 20px 0;
+        }
+      }
+      @media (max-width: 767px) {
+        .modern-contact-box {
+          min-height: 140px;
+          padding: 24px 10px 18px 10px;
+        }
+        .contact-info-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 1.3rem;
+        }
+        .contact-info-icon i {
+          font-size: 1.3rem;
+        }
+        .contact-heading {
+          font-size: 1.1rem;
+        }
+        .contact-content {
+          font-size: 0.95rem;
+        }
+      }
+  </style>
 	<header id="header" class="header">
 
 		<div class="nav-wrap">
@@ -203,7 +281,9 @@
               </div>
               <div class="contact-info-text">
                 <h5 class="contact-heading">Address</h5>
-                <p class="contact-content">314/2 Perumbulli Village, Thenampatty post,<br>Vadamadurai, Dindigul-624801.</p>
+                <p class="contact-content">B-10, Vivekananda Nagar, <br>Opp. St.Joseph’s Hospital,<br>
+					Eswari Stores backside,<br>
+					Dindigul - 624001.</p>
               </div>
             </div>
           </div>
@@ -229,24 +309,11 @@
               </div>
               <div class="contact-info-text">
                  <h5 class="contact-heading">Office Time</h5>
-                <p class="contact-content">Mon - Thu<br>Fri - Mon</p>
+                <p class="contact-content">Monday - Saturday</p>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4 mb-4">
-          <div class="contact-info">
-            <div class="contact-info-item d-flex align-items-start">
-              <div class="contact-info-icon me-3">
-                <i class="fas fa-clock fa-2x"></i>
-              </div>
-              <div class="contact-info-text text-center">
-                <h5>Office Time</h5>
-                <p>Mon - Thu: 9:00 am - 4:00 pm<br>Fri - Mon: 10:00 am - 5:00 pm</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
 
       <div class="row align-items-start">
@@ -289,85 +356,6 @@
         </div>
       </div>
     </div>
-    <style>
-      .modern-contact-box {
-        background: #fff;
-        border-radius: 24px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-        min-height: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: box-shadow 0.2s;
-        padding: 36px 24px 28px 24px;
-        margin: 0 10px;
-      }
-      .modern-contact-box:hover {
-        box-shadow: 0 8px 32px rgba(0,0,0,0.16);
-      }
-      .contact-info-item {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      .contact-info-icon {
-        color: #000 !important;
-        margin-bottom: 18px;
-        font-size: 2.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .contact-info-icon i {
-        color: #000 !important;
-        font-size: 2.2rem;
-      }
-      .contact-heading {
-        font-weight: 700;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: #222;
-        letter-spacing: 0.5px;
-      }
-      .contact-content {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #444;
-        margin-bottom: 0;
-      }
-      .row.gx-4 {
-        gap: 32px 0;
-      }
-      @media (max-width: 991px) {
-        .modern-contact-box {
-          min-height: 180px;
-          margin: 0 0 20px 0;
-        }
-      }
-      @media (max-width: 767px) {
-        .modern-contact-box {
-          min-height: 140px;
-          padding: 24px 10px 18px 10px;
-        }
-        .contact-info-icon {
-          width: 50px;
-          height: 50px;
-          font-size: 1.3rem;
-        }
-        .contact-info-icon i {
-          font-size: 1.3rem;
-        }
-        .contact-heading {
-          font-size: 1.1rem;
-        }
-        .contact-content {
-          font-size: 0.95rem;
-        }
-      }
-    </style>
   </section>
   <script>
     function sentToWhatsapp() {
@@ -402,9 +390,9 @@
 			<div class="col-lg-4 col-md-6 col-sm-12 mb-4" style="font-size: 20px; font-weight: bolder;">
 				<h4 class="mb-30">Contact Us</h4>
 				<address>
-					<i class="ion-ios-location fa-icons"></i> 314/2 Perumbulli Village,<br>
-					Thenampatty Post,<br>
-					Vadamadurai, Dindigul - 624801.
+					<i class="ion-ios-location fa-icons"></i>B-10, Vivekananda Nagar, <br>Opp. St.Joseph’s Hospital,<br>
+					Eswari Stores backside,<br>
+					Dindigul - 624001.
 				</address>
 				<ul class="link-small">
 					<li>
@@ -414,7 +402,7 @@
 					</li>
 					<li>
 						<a href="tel:+917092000044">
-							<i class="ion-ios-telephone fa-icons"></i> +91 70 92 00 00 44
+							<i class="ion-ios-telephone fa-icons"></i> +91 7092900347
 						</a>
 					</li>
 				</ul>
