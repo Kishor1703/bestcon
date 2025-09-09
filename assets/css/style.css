@@ -1,4 +1,23 @@
-﻿/*Table Content
+﻿@media (max-width: 600px) {
+	.inner-intro {
+		padding-top: 10px !important;
+		margin-top: 0 !important;
+		min-height: unset !important;
+	}
+	.inner-intro .container {
+		padding-top: 0 !important;
+	}
+	.inner-intro .row.title {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+	}
+	.inner-intro h1 {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+		font-size: 2rem !important;
+	}
+}
+/*Table Content
  =================================================
  * BASIC STYLE
  - Typography Style
