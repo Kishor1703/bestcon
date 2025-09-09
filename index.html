@@ -429,361 +429,229 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center align-items-center"
-				style="padding:0;margin:0;min-height:600px;width:100%;">
-				<div class="radial-wrap"
-					style="position:relative;width:600px;height:500px;;border-radius:32px;display:flex;align-items:center;justify-content:center;overflow:visible;margin:0;">
-					<div class="bescon-center"
-						style="position:absolute;left:50%;top:50%;width:220px;height:100px;background:transparent;border-radius:51% 51% 51% 51%/49% 49% 49% 49%;transform:translate(-50%, -50%);display:flex;align-items:center;justify-content:center;z-index:3;">
-						<div class="bescon-oval"
-							style="width:100%;height:100%;border:6px solid rgba(34,34,34,0.9);border-radius:50px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 10px 18px rgba(0,0,0,0.12);">
-							<div class="bescon-inner"
-								style="font-size:2.3rem;font-weight:bold;color:#1795d3;letter-spacing:2px;display:flex;align-items:center;">
-								BEST<span style="color:#FFC627;margin-left:6px;">CON</span>
-							</div>
-						</div>
-					</div>
-					<svg class="radial-lines"></svg>
-					<!-- mobile-only simple list (hidden on desktop) -->
-					<div class="mobile-only" style="display:none; width:100%; box-sizing:border-box; padding:18px;">
-						<div class="mobile-feature"><span class="badge f0">01</span><span class="m-label">Consistently
-								Efficient</span></div>
-						<div class="mobile-feature"><span class="badge f6">02</span><span
-								class="m-label">Sustainability</span></div>
-						<div class="mobile-feature"><span class="badge f2">03</span><span class="m-label">Customized
-								Solution</span></div>
-						<div class="mobile-feature"><span class="badge f3">04</span><span class="m-label">Uncompromised
-								Quality</span></div>
-						<div class="mobile-feature"><span class="badge f4">05</span><span class="m-label">Timely
-								Delivery</span></div>
-						<div class="mobile-feature"><span class="badge f5">06</span><span
-								class="m-label">Reliability</span></div>
-						<div class="mobile-feature"><span class="badge f1">07</span><span class="m-label">Cost
-								Effective</span></div>
-					</div>
-				</div>
-			</div>
-			<style>
-				.radial-feature {
-					position: absolute;
-					width: 185px;
-					text-align: center;
-					font-weight: 700;
-					opacity: 0;
-					transform: scale(0.8);
-					transition: opacity 0.7s, transform 0.7s;
-					z-index: 4;
-					/* raised so badges render above center */
-					background: transparent;
-					pointer-events: none;
-				}
+     style="padding:0;margin:0;min-height:600px;width:100%;box-sizing:border-box;">
+    <div class="radial-wrap"
+         style="position:relative;width:600px;height:500px;border-radius:32px;display:flex;align-items:center;justify-content:center;overflow:visible;margin:0;">
+        <div class="bescon-center"
+             style="position:absolute;left:50%;top:50%;width:220px;height:100px;background:transparent;border-radius:51% 51% 51% 51%/49% 49% 49% 49%;transform:translate(-50%, -50%);display:flex;align-items:center;justify-content:center;z-index:3;">
+            <div class="bescon-oval"
+                 style="width:100%;height:100%;border:6px solid rgba(34,34,34,0.9);border-radius:50px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 10px 18px rgba(0,0,0,0.12);">
+                <div class="bescon-inner"
+                     style="font-size:2.3rem;font-weight:bold;color:#1795d3;letter-spacing:2px;display:flex;align-items:center;">
+                    BES<span style="color:#FFC627;margin-left:6px;">CON</span>
+                </div>
+            </div>
+        </div>
+        <svg class="radial-lines"></svg>
+        <!-- mobile-only simple list (hidden on desktop) -->
+        <div class="mobile-only"
+             style="display:none;width:100%;box-sizing:border-box;padding:18px;">
+            <!-- content populated by JS for easy update -->
+        </div>
+    </div>
+</div>
+<style>
+    .radial-feature {
+        position: absolute;
+        width: 185px;
+        text-align: center;
+        font-weight: 700;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.7s, transform 0.7s;
+        z-index: 4;
+        background: transparent;
+        pointer-events: none;
+    }
+    .radial-feature .badge {
+        display: inline-block;
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 16px 22px;
+        border-radius: 50%;
+        margin-bottom: 8px;
+        color: #fff;
+        z-index: 5;
+        position: relative;
+    }
+    .radial-feature.f0 .badge {background: #F49C30;}
+    .radial-feature.f1 .badge {background: #20B4D9;}
+    .radial-feature.f2 .badge {background: #BA2622;}
+    .radial-feature.f3 .badge {background: #FFC627;color: #fff;}
+    .radial-feature.f4 .badge {background: #96CC29; color: #fff;}
+    .radial-feature.f5 .badge {background: #322B81;}
+    .radial-feature.f6 .badge {background: #0D8AC7;}
+    .radial-feature.f0 span {color: #F49C30;}
+    .radial-feature.f1 span {color: #20B4D9;}
+    .radial-feature.f2 span {color: #BA2622;}
+    .radial-feature.f3 span {color: #FFC627;}
+    .radial-feature.f4 span {color: #96CC29;}
+    .radial-feature.f5 span {color: #322B81;}
+    .radial-feature.f6 span {color: #0D8AC7;}
+    .radial-feature.show {
+        opacity: 1;
+        transform: scale(1.13);
+        pointer-events: auto;
+        animation: pop 400ms cubic-bezier(.2, .9, .2, 1) both;
+    }
+    .radial-lines {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+    .radial-lines line {
+        stroke-dasharray: 7, 7;
+        animation: dash 1.6s linear infinite;
+    }
+    @keyframes dash {
+        to { stroke-dashoffset: -14; }
+    }
+    @keyframes pop {
+        from { transform: scale(0.6); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    .bescon-inner {
+        animation: floaty 3s ease-in-out infinite;
+    }
+    @keyframes floaty {
+        0% { transform: translateY(0);}
+        50% { transform: translateY(-6px);}
+        100% { transform: translateY(0);}
+    }
 
-				.radial-feature .badge {
-					display: inline-block;
-					font-size: 1.05rem;
-					font-weight: 600;
-					padding: 16px 22px;
-					border-radius: 50%;
-					margin-bottom: 8px;
-					color: #fff;
-					z-index: 5;
-					position: relative;
-				}
+    /* Mobile styles: switch to vertical simple list, hide radial elements */
+    @media (max-width: 700px) {
+        .radial-wrap {
+            width: 99vw !important;
+            min-width: 0 !important;
+            height: auto !important;
+            min-height: 0 !important;
+            max-width: 99vw !important;
+            background: #fff;
+            box-shadow: none;
+        }
+        .radial-feature, .radial-lines, .bescon-center {display: none !important;}
+        .mobile-only {display: block !important;}
+        .mobile-feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 12px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+        .mobile-feature .badge {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1em;
+            padding: 0;
+        }
+        .mobile-feature .m-label {
+            font-weight: 600;
+            color: #222;
+            font-size: 1.05em;
+        }
+    }
+    @media (max-width: 420px) {
+        .mobile-feature {padding: 8px 6px;}
+        .mobile-feature .badge {width: 30px;height: 30px;font-size: .95em;}
+        .mobile-feature .m-label {font-size: .95em;}
+    }
+</style>
+<script>
+    const features = [
+        { label: "Consistently<br>Efficient", badge: "01", color: "f0" },
+        { label: "Sustainability", badge: "02", color: "f1" },
+        { label: "Customized<br>Solution", badge: "03", color: "f2" },
+        { label: "Uncompromised<br>Quality", badge: "04", color: "f3" },
+        { label: "Timely Delivery", badge: "05", color: "f4" },
+        { label: "Reliability", badge: "06", color: "f5" },
+        { label: "Cost<br>Effective", badge: "07", color: "f6" },
+    ];
+    // Desktop: draw radial
+    function renderRadial() {
+        const wrap = document.querySelector('.radial-wrap');
+        const svg = document.querySelector('.radial-lines');
+        if (window.innerWidth <= 700) return; // skip if mobile
+        // clean
+        if(svg) svg.innerHTML = '';
+        Array.from(wrap.querySelectorAll('.radial-feature')).forEach(n => n.remove());
 
-				.radial-feature.f0 .badge {
-					background: #F49C30;
-				}
+        const w = wrap.clientWidth, h = wrap.clientHeight;
+        svg.setAttribute('width', w);
+        svg.setAttribute('height', h);
 
-				.radial-feature.f1 .badge {
-					background: #20B4D9;
-				}
+        const cx = w/2, cy = h/2;
+        const rx = Math.max(90, w * 0.36), ry = Math.max(55, h * 0.30);
+        const total = features.length;
 
-				.radial-feature.f2 .badge {
-					background: #BA2622;
-				}
+        features.forEach((item, i) => {
+            const angle = (Math.PI/2) + (i/(total-1))*(Math.PI*1.2) - (Math.PI*0.6);
+            const x = cx + rx * Math.cos(angle);
+            const y = cy - ry * Math.sin(angle);
+            const lx = cx + (rx*0.63) * Math.cos(angle);
+            const ly = cy - (ry*0.63) * Math.sin(angle);
 
-				.radial-feature.f3 .badge {
-					background: #FFC627;
-					color: #fff;
-				}
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", cx); line.setAttribute("y1", cy);
+            line.setAttribute("x2", lx); line.setAttribute("y2", ly);
+            line.setAttribute("stroke", "#111");
+            line.setAttribute("stroke-width", "3");
+            line.setAttribute("stroke-dasharray", "7,7");
+            svg.appendChild(line);
 
-				.radial-feature.f4 .badge {
-					background: #96CC29;
-					color: #fff;
-				}
+            const fdiv = document.createElement('div');
+            fdiv.className = `radial-feature ${item.color}`;
+            fdiv.innerHTML = `<div class="badge">${item.badge}</div><br><span>${item.label}</span>`;
+            wrap.appendChild(fdiv);
 
-				.radial-feature.f5 .badge {
-					background: #322B81;
-				}
+            requestAnimationFrame(() => {
+                const fw = fdiv.offsetWidth || 185, fh = fdiv.offsetHeight || 60;
+                fdiv.style.left = (x - fw/2) + 'px';
+                fdiv.style.top  = (y - fh/2) + 'px';
+                setTimeout(()=>fdiv.classList.add('show'), 40 + i*140);
+            });
+        });
+    }
+    // Mobile: generate simple list
+    function renderMobileList() {
+        const mobDiv = document.querySelector('.mobile-only');
+        mobDiv.innerHTML = '';
+        features.forEach(item => {
+            // each .badge gets its color class for mobile
+            mobDiv.innerHTML += `<div class="mobile-feature"><span class="badge ${item.color}">${item.badge}</span><span class="m-label">${item.label.replace(/<br>/g," ")}</span></div>`;
+        });
+    }
+    function updateLayout() {
+        if(window.innerWidth <= 700){
+            renderMobileList();
+        } else {
+            renderRadial();
+        }
+    }
+    if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', updateLayout);
+    } else {
+        updateLayout();
+    }
+    window.addEventListener('resize', ()=>{
+        clearTimeout(window._radialResizeThrottler);
+        window._radialResizeThrottler = setTimeout(updateLayout, 100);
+    });
+</script>
 
-				.radial-feature.f6 .badge {
-					background: #0D8AC7;
-				}
-
-				.radial-feature.f0 span {
-					color: #F49C30;
-				}
-
-				.radial-feature.f1 span {
-					color: #20B4D9;
-				}
-
-				.radial-feature.f2 span {
-					color: #BA2622;
-				}
-
-				.radial-feature.f3 span {
-					color: #FFC627;
-				}
-
-				.radial-feature.f4 span {
-					color: #96CC29;
-				}
-
-				.radial-feature.f5 span {
-					color: #322B81;
-				}
-
-				.radial-feature.f6 span {
-					color: #0D8AC7;
-				}
-
-				.radial-feature.show {
-					opacity: 1;
-					transform: scale(1.13);
-					pointer-events: auto;
-				}
-
-				.radial-lines {
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					z-index: 1;
-					pointer-events: none;
-				}
-
-				/* mobile: hide radial visuals, show only simple content list */
-				@media (max-width:420px) {
-					.radial-wrap {
-						height: auto !important;
-						padding: 14px;
-						box-shadow: none;
-					}
-
-					.radial-wrap .bescon-center,
-					.radial-wrap svg.radial-lines,
-					.radial-feature {
-						display: none !important;
-					}
-
-					.radial-wrap .mobile-only {
-						display: block !important;
-					}
-
-					.radial-wrap .mobile-gif {
-						display: none !important;
-					}
-
-					.mobile-feature {
-						display: flex;
-						gap: 12px;
-						align-items: center;
-						padding: 8px 10px;
-						background: #fff;
-						border-radius: 10px;
-						margin: 8px 0;
-						box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
-					}
-
-					.mobile-feature .badge {
-						width: 36px;
-						height: 36px;
-						display: inline-flex;
-						align-items: center;
-						justify-content: center;
-						border-radius: 50%;
-						color: #fff;
-						font-weight: 700;
-					}
-
-					.mobile-feature .m-label {
-						font-weight: 600;
-						color: #222;
-						font-size: 0.95rem;
-					}
-				}
-
-				@media (max-width:1000px) {
-					.radial-wrap {
-						width: 90%;
-						max-width: 620px;
-						aspect-ratio: 6 / 5;
-						background: linear-gradient(180deg, rgba(250, 250, 252, 1) 0%, rgba(255, 255, 255, 1) 35%);
-					}
-
-				}
-
-				@media (max-width:700px) {
-					.radial-wrap {
-						width: 90%;
-						max-width: 620px;
-						aspect-ratio: 6 / 5;
-						background: linear-gradient(180deg, rgba(250, 250, 252, 1) 0%, rgba(255, 255, 255, 1) 35%);
-					}
-				}
-
-				/* Animation + visual improvements for the radial card */
-				/* .radial-wrap {
-					background: linear-gradient(180deg, rgba(250, 250, 252, 1) 0%, rgba(255, 255, 255, 1) 35%);
-				} */
-
-				.radial-wrap::before {
-					content: '';
-					position: absolute;
-					inset: 0;
-					/* background: radial-gradient(circle at 50% 40%, rgba(23, 149, 211, 0.03), transparent 30%); */
-					border-radius: 32px;
-					pointer-events: none;
-				}
-
-				/* dashed line animation */
-				.radial-lines line {
-					stroke-dasharray: 7, 7;
-					animation: dash 1.6s linear infinite;
-				}
-
-				@keyframes dash {
-					to {
-						stroke-dashoffset: -14;
-					}
-				}
-
-				/* pop animation for features */
-				@keyframes pop {
-					from {
-						transform: scale(0.6);
-						opacity: 0;
-					}
-
-					to {
-						transform: scale(1);
-						opacity: 1;
-					}
-				}
-
-				.radial-feature.show {
-					animation: pop 400ms cubic-bezier(.2, .9, .2, 1) both;
-				}
-
-				/* subtle float for center */
-				@keyframes floaty {
-					0% {
-						transform: translateY(0);
-					}
-
-					50% {
-						transform: translateY(-6px);
-					}
-
-					100% {
-						transform: translateY(0);
-					}
-				}
-
-				.bescon-inner {
-					animation: floaty 3s ease-in-out infinite;
-				}
-
-				/* slightly reduce badge size on very small screens */
-				@media (max-width:420px) {
-					.radial-feature {
-						width: 120px;
-					}
-
-					.bescon-inner {
-						font-size: 1.2rem !important;
-					}
-				}
-			</style>
-			<script>
-				const features = [
-					{ label: "Consistently<br>Efficient", badge: "01" },
-					{ label: "Sustainability", badge: "02" },
-					{ label: "Customized<br>Solution", badge: "03" },
-					{ label: "Uncompromised<br>Quality", badge: "04" },
-					{ label: "Timely Delivery", badge: "05" },
-					{ label: "Reliability", badge: "06" },
-					{ label: "Cost<br>Effective", badge: "07" },
-				];
-
-				const wrap = document.querySelector('.radial-wrap');
-				const svg = document.querySelector('.radial-lines');
-
-				function renderRadial() {
-					// clear previous content
-					svg.innerHTML = '';
-					Array.from(wrap.querySelectorAll('.radial-feature')).forEach(n => n.remove());
-
-					const w = wrap.clientWidth;
-					const h = wrap.clientHeight;
-					svg.setAttribute('width', w);
-					svg.setAttribute('height', h);
-
-					const cx = w / 2;
-					const cy = h / 2;
-					const rx = Math.max(120, w * 0.36);
-					const ry = Math.max(80, h * 0.28);
-					const total = features.length;
-
-					features.forEach((item, i) => {
-						const angle = (Math.PI / 2) + (i / (total - 1)) * (Math.PI * 1.2) - (Math.PI * 0.6);
-						const x = cx + rx * Math.cos(angle);
-						const y = cy - ry * Math.sin(angle);
-
-						const lx = cx + (rx * 0.65) * Math.cos(angle);
-						const ly = cy - (ry * 0.65) * Math.sin(angle);
-
-						const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-						line.setAttribute("x1", cx);
-						line.setAttribute("y1", cy);
-						line.setAttribute("x2", lx);
-						line.setAttribute("y2", ly);
-						line.setAttribute("stroke", "#111");
-						line.setAttribute("stroke-width", "3");
-						line.setAttribute("stroke-dasharray", "7,7");
-						svg.appendChild(line);
-
-						const fdiv = document.createElement('div');
-						fdiv.className = `radial-feature f${i}`;
-						fdiv.innerHTML = `<div class=\\"badge\\">${item.badge}</div><br><span>${item.label}</span>`;
-						// append first so styles apply
-						wrap.appendChild(fdiv);
-
-						// wait for layout, then measure and position
-						requestAnimationFrame(() => {
-							const fw = fdiv.offsetWidth || 185;
-							const fh = fdiv.offsetHeight || 60;
-							fdiv.style.left = (x - fw / 2) + 'px';
-							fdiv.style.top = (y - fh / 2) + 'px';
-							// reveal
-							setTimeout(() => fdiv.classList.add('show'), 40 + i * 120);
-						});
-					});
-				}
-
-				// initial render when DOM is ready
-				if (document.readyState === 'loading') {
-					document.addEventListener('DOMContentLoaded', renderRadial);
-				} else {
-					renderRadial();
-				}
-
-				window.addEventListener('resize', () => {
-					clearTimeout(window._radialResize);
-					window._radialResize = setTimeout(renderRadial, 120);
-				});
-			</script>
 		</div>
 	</section>
 
