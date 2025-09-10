@@ -134,15 +134,36 @@
   </section>
 
 <style>
-  th{
+ /* Mobile view adjustments */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;       /* smaller font */
+    table-layout: fixed;   /* force table to shrink */
+    width: 100% !important;
+  }
 
-font-size: 20px;
-font-weight: bold
+  table th,
+  table td {
+    padding: 4px;          /* reduce cell padding */
+    word-wrap: break-word; /* wrap text inside cells */
   }
-  td{
-   
-font-size: 18px;
+
+  .table-responsive {
+    overflow-x: hidden;    /* hide horizontal scrollbar */
   }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 10px;       /* even smaller for very small screens */
+  }
+
+  table th,
+  table td {
+    padding: 3px;
+  }
+}
+
 </style>
 
 
@@ -328,8 +349,13 @@ font-size: 18px;
 						</a>
 					</li>
 					<li>
-						<a href="tel:+917092000044">
+						<a href="tel:+917092900347">
 							<i class="ion-ios-telephone fa-icons"></i> +91 7092900347
+						</a>
+					</li>
+					<li>
+						<a href="tel:+917092000044">
+							<i class="ion-ios-telephone fa-icons"></i> +91 7092000044
 						</a>
 					</li>
 				</ul>
