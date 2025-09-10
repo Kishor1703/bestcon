@@ -151,6 +151,12 @@
   .table-responsive {
     overflow-x: hidden;    /* hide horizontal scrollbar */
   }
+  .comparison-table th {
+  white-space: nowrap;   /* Prevent breaking */
+  text-align: center;    /* Center align */
+  vertical-align: middle;/* Align text in the middle */
+}
+
 }
 
 @media (max-width: 480px) {
@@ -223,8 +229,8 @@
       <h3 class="fw-bold text-center  fs-1 pb-4">Comparison Chart</h3>
 
       <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover bg-white text-center align-middle">
-          <thead class="table-dark fs-5">
+        <table class="table table-bordered table-striped table-hover bg-white text-center ">
+          <thead class="table-dark ">
             <tr>
               <th style="color: black;" scope="col">PARAMETERS</th>
               <th style="color: black;" scope="col">AAC Blocks</th>
