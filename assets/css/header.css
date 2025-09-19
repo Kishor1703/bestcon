@@ -171,8 +171,14 @@
 
 .value-left h2, .value-right h2	, .value-center h2 {
    color: rgba(252, 252, 5, 0.915);
-  font-size: 2.8rem;
+  font-size: 4rem;
   margin-bottom: 15px;/* Adjust font size as needed */
+  font-weight: bolder;
+  text-shadow:
+    0 0 5px #f21616,  /* Inner, tighter glow */
+    0 0 10px #ff0606, /* Slightly wider glow */
+    0 0 20px rgb(255, 0, 0), /* Outer, colored glow */
+    0 0 30px rgb(255, 0, 0); /* Even wider, colored glow */
 }
 
 
@@ -229,7 +235,7 @@
 		font-size: 1.1rem;
 	}
 	.value-left h2, .value-right h2, .value-center h2 {
-		font-size: 1.3rem;
+		font-size: 2.5rem;
 		margin-bottom: 8px;
 	}
 }
